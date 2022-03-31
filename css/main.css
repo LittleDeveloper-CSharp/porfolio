@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Raleway";
+}
+
+html,
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-container {
+  background-color: #2c2c2c;
+}
+
+.header-container .header-description {
+  padding-top: 120px;
+  padding-bottom: 140px;
+  text-align: center;
+  margin: auto;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 50%;
+}
+
+.header-container .header-description .name-person {
+  font-weight: 400;
+  border: 2px solid #d4000f;
+  color: #d4000f;
+  display: inline-block;
+  letter-spacing: 6px;
+  padding: 25px 35px;
+  margin: 30px 0;
+}
+
+.header-container .header-description .work-position {
+  margin-bottom: 20px;
+}
+
+.header-container .header-description .quote {
+  color: #999999;
+}
+
+.header-container .header-description .btn-start {
+  text-decoration: none;
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  padding: 14px 50px;
+  cursor: pointer;
+  display: inline-block;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin-top: 40px;
+}
+
+.header-container .header-description .btn-start:hover {
+  background: #d4000f;
+  border-color: transparent;
+}
+
+.what-i-do-container {
+  background-color: #1a1a1a;
+}
+
+.what-i-do-container .header {
+  text-transform: uppercase;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.what-i-do-container .do-card .header-card {
+  margin: auto;
+}
+/*# sourceMappingURL=main.css.map */
