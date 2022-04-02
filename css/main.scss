@@ -1,8 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-* {
-    font-family: "Raleway";
-}
+// * {
+//     font-family: "Raleway";
+// }
+
+$section-backgroud-color: #1a1a1a;
+$item-color: #d4000f;
+$main-color: #fff;
+$submain-color: #999;
 
 html,
 body {
@@ -14,18 +19,52 @@ h2,
 h3,
 h4,
 h5 {
-    color: #ffffff;
+    color: $main-color;
     font-weight: bold;
     margin: 0;
 }
 
-.header-container {
-    // background-image: url("../photo.jpg");
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    background-color: rgb(44, 44, 44);
+%media-icon {
+    display: inline-block;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    color: $item-color;
+    margin-right: 20px;
+    transition: all 0.4s ease;
+    vertical-align: top;
+    border: 2px solid $main-color;
 
+    &:hover {
+        background-color: $main-color;
+    }
+}
+
+%btn {
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid $main-color;
+    color: $main-color;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.4s ease-in-out;
+    padding: 14px 50px;
+    cursor: pointer;
+    display: inline-block;
+    width: min-content;
+    margin-top: 40px;
+
+    &:hover {
+        background: $item-color;
+        border-color: transparent;
+    }
+}
+
+.header-container {
+    background-image: url("../photo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     .header-description {
         padding-top: 120px;
         padding-bottom: 140px;
@@ -36,8 +75,8 @@ h5 {
 
         .name-person {
             font-weight: 400;
-            border: 2px solid #d4000f;
-            color: #d4000f;
+            border: 2px solid $item-color;
+            color: $item-color;
             display: inline-block;
             letter-spacing: 6px;
             padding: 25px 35px;
@@ -49,43 +88,199 @@ h5 {
         }
 
         .quote {
-            color: #999999;
+            color: $submain-color;
         }
 
         .btn-start {
-            text-decoration: none;
-            background: transparent;
-            border: 2px solid #ffffff;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: bold;
-            transition: all 0.4s ease-in-out;
-            padding: 14px 50px;
-            cursor: pointer;
-            display: inline-block;
-            width: min-content;
-            margin-top: 40px;
+            @extend %btn;
+            border: 2px solid $main-color;
 
             &:hover {
-                background: #d4000f; //#d43f52;
-                border-color: transparent;
+                background-color: $item-color;
             }
         }
     }
 }
 
-.what-i-do-container {
-    background-color: #1a1a1a;
+section {
+    background-color: $section-backgroud-color;
+}
 
-    .header {
-        text-transform: uppercase;
-        margin: auto;
-        width: fit-content;
-    }
+.container-lg {
+    padding-top: 100px;
+    padding-bottom: 120px;
 
-    .do-card {
-        .header-card {
+    .row {
+        .header {
+            text-transform: uppercase;
             margin: auto;
+            width: fit-content;
+            margin-bottom: 30px;
+        }
+
+        .contact-card .description-card .media-icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        .skill-card .description-card {
+            @media (max-width: 767px) {
+                margin: auto;
+                width: max-content;
+            }
+        }
+
+        .skill-card,
+        .contact-card {
+            .header-card {
+                margin: auto;
+            }
+
+            .description-card {
+                .media-icon {
+                    @extend %media-icon;
+                }
+
+                .description {
+                    display: inline-block;
+
+                    .technologe-list {
+                        padding-left: 16px;
+
+                        .technologe {
+                            color: $submain-color;
+
+                            &::marker {
+                                color: $item-color;
+                            }
+                        }
+                    }
+                }
+
+                .header-description {
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .portfolio-card {
+            position: relative;
+
+            .image-card {
+                max-width: 100%;
+                display: block;
+            }
+
+            .overlay-card {
+                position: absolute;
+                background-color: $item-color;
+                color: $main-color;
+                top: 0;
+                right: 0;
+                opacity: 0;
+                width: 100%;
+                height: 100%;
+                transition: all 0.4s ease;
+
+                &:hover {
+                    opacity: 0.7;
+                    transform: scale(0.9);
+                }
+
+                .overlay-text {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: max-content;
+                    height: max-content;
+                    margin: auto;
+                }
+            }
+        }
+
+        form {
+            .form-item {
+                margin-bottom: 20px;
+
+                input,
+                textarea {
+                    min-height: 50px;
+                    width: 100%;
+                    background-color: transparent;
+                    border: 2px solid $submain-color;
+                    padding: 6px 12px;
+                    font-size: 14px;
+                    color: $main-color;
+
+                    &:focus-visible {
+                        outline: none;
+                    }
+                }
+            }
+
+            button {
+                margin-top: 0;
+                @extend %btn;
+                background-color: $item-color;
+                color: $main-color;
+                border: none;
+                width: 100%;
+
+                &:hover {
+                    color: $item-color;
+                    background-color: $main-color;
+                }
+            }
+        }
+
+        .about-me-description {
+            color: $submain-color;
+        }
+
+        .progresses {
+            margin: auto;
+
+            h6,
+            small {
+                margin: 0;
+                color: $main-color;
+                padding-bottom: 5px;
+            }
+
+            small {
+                float: right;
+            }
+
+            .progress {
+                height: 5px;
+                margin-bottom: 20px;
+
+                .progress-bar-danger {
+                    background-color: $item-color;
+                }
+            }
+        }
+
+        .block-header {
+            margin: 0;
+            margin-bottom: 30px;
+
+            h4 {
+                color: $item-color;
+            }
+        }
+
+        .contact-card {
+            margin-bottom: 10px;
+
+            .description,
+            a {
+                line-height: 50px;
+                color: $submain-color;
+                text-decoration: none;
+            }
         }
     }
 }
