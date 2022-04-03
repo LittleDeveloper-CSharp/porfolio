@@ -32,8 +32,14 @@ h5 {
     color: $item-color;
     margin-right: 20px;
     transition: all 0.4s ease;
+    padding-left: 9px;
+    padding-right: 9px;
     vertical-align: top;
     border: 2px solid $main-color;
+
+    i {
+        font-size: 38px;
+    }
 
     &:hover {
         background-color: $main-color;
@@ -166,6 +172,7 @@ section {
 
         .portfolio-card {
             position: relative;
+            cursor: pointer;
 
             .image-card {
                 max-width: 100%;
@@ -280,6 +287,12 @@ section {
                 line-height: 50px;
                 color: $submain-color;
                 text-decoration: none;
+            }
+
+            .description-card .media-icon {
+                .bi {
+                    font-size: 30px;    
+                }
             }
         }
     }

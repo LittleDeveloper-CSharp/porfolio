@@ -23,8 +23,14 @@ h5 {
   margin-right: 20px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  padding-left: 9px;
+  padding-right: 9px;
   vertical-align: top;
   border: 2px solid #fff;
+}
+
+.container-lg .row .skill-card .description-card .media-icon i, .container-lg .row .contact-card .description-card .media-icon i {
+  font-size: 38px;
 }
 
 .container-lg .row .skill-card .description-card .media-icon:hover,
@@ -164,6 +170,7 @@ section {
 
 .container-lg .row .portfolio-card {
   position: relative;
+  cursor: pointer;
 }
 
 .container-lg .row .portfolio-card .image-card {
@@ -284,5 +291,9 @@ section {
   line-height: 50px;
   color: #999;
   text-decoration: none;
+}
+
+.container-lg .row .contact-card .description-card .media-icon .bi {
+  font-size: 30px;
 }
 /*# sourceMappingURL=main.css.map */
