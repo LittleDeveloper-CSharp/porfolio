@@ -14,68 +14,51 @@
 </head>
 
 <body style="background-color: #000000;">
-
-
   <div id="myModal" class="modal" tabindex="-1">
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 id="modal-title" class="modal-title"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div class="container-xxl">
-            <div class="row">
-              <div class="col-md-6 col-12">
-                Ты пидр
+            <div class="row gy-3">
+              <div class="col-md-6 col-12 col-description">
+                <div id="description-project" class="description"></div>
+                <div id="stack-technology" class="stack-technology"></div>
               </div>
               <div class="col-md-6 col-12">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  </div>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="..." class="d-block w-100">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="..." class="d-block w-100">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="..." class="d-block w-100">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+                  <div id="carousel-indicators" class="carousel-indicators"></div>
+                  <div id="carousel-container" class="carousel-inner"></div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Предыдущий</span>
                   </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Следующий</span>
                   </button>
                 </div>
               </div>
             </div>
+          </div>
         </div>
-      </div>
-
-      <div class="modal-footer">
+        <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
         </div>
       </div>
     </div>
   </div>
-
-
-
   <header>
     <div class="header-container">
       <div class="header-description">
         <h3>Люблю кофе и кофе</h3>
         <h1 class="name-person">LittleDeveloper-CSharp</h1>
-        <h2 id="work-position-rotate" class="work-position" style="opacity: 1;">Я тупой</h2>
+        <h2 id="work-position-rotate" class="work-position" style="opacity: 1;"></h2>
         <div class="quote">
           Mən bir proqramçı və veb-dizayner oldum, qəhvə və anime qızlarını
           sevirəm.
@@ -214,7 +197,7 @@
         <div class="row gy-4">
           <div class="col-md-4 col-12">
             <div class="portfolio-card" onclick="ShowModal('Хочу стул')">
-              <img class="image-card" src="test.png" />
+              <img class="image-card" src="resources/harizma/test.png" />
               <div class="overlay-card">
                 <h3 class="overlay-text">Хочу стул</h3>
               </div>
@@ -222,7 +205,7 @@
           </div>
           <div class="col-md-4 col-12">
             <div class="portfolio-card" onclick="ShowModal('Портфолио')">
-              <img class="image-card" src="test.png" />
+              <img class="image-card" src="resources/harizma/test.png" />
               <div class="overlay-card">
                 <h3 class="overlay-text">Портфолио</h3>
               </div>
@@ -230,7 +213,7 @@
           </div>
           <div class="col-md-4 col-12">
             <div class="portfolio-card" onclick="ShowModal('Харизма')">
-              <img class="image-card" src="test.png" />
+              <img class="image-card" src="resources/harizma/test.png" />
               <div class="overlay-card">
                 <h3 class="overlay-text">Харизма</h3>
               </div>
@@ -238,7 +221,7 @@
           </div>
           <div class="col-md-6 col-12">
             <div class="portfolio-card" onclick="ShowModal('FASTCODE')">
-              <img class="image-card" src="test.png" />
+              <img class="image-card" src="resources/harizma/test.png" />
               <div class="overlay-card">
                 <h3 class="overlay-text">FAST[CODE]</h3>
               </div>
@@ -246,7 +229,7 @@
           </div>
           <div class="col-md-6 col-12">
             <div class="portfolio-card" onclick="ShowModal('Учет студентов')">
-              <img class="image-card" src="test.png" />
+              <img class="image-card" src="resources/harizma/test.png" />
               <div class="overlay-card">
                 <h3 class="overlay-text">Учет студентов</h3>
               </div>
@@ -282,6 +265,16 @@
               </span>
               <div class="description">
                 <a href="mailto:p4v3l.pa@yandex.ru">p4v3l.pa@yandex.ru</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="description-card">
+              <span class="media-icon">
+                <i class="bi bi-github"></i>
+              </span>
+              <div class="description">
+                <a href="https://github.com/LittleDeveloper-CSharp">LittleDeveloper-CSharp</a>
               </div>
             </div>
           </div>
