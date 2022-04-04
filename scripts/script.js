@@ -99,7 +99,7 @@ function CreateModal(modalInfo) {
 
 function HarizmaModal() {
 	this.Title = "Харизма";
-	this.Description = "Данный проект был разработан по заказу. Он представляет собой обычный интернет магазин. Где существует 2 пользователя - гость и администратор.";
+	this.Description = "Данный проект был разработан по заказу. Он представляет собой обычный интернет магазин, где существует 2 пользователя - гость и администратор.";
 	this.StackTechnology = ["Bootstrap 5", "HTML5", "CSS3", "SCSS", "JS", "JQuery"];
 	this.RootImagesPath = `${ROOT_IMAGES_PATH}harizma/`;
 	this.Images = ["test.png", "test.png", "test.png"];
@@ -115,7 +115,7 @@ function UAKModal() {
 
 function HochuStulModal() {
 	this.Title = "Хочу стул";
-	this.Description = "Это был самый первый проект, который был выполнен по заказу. Опять таки простой интернет магазин.";
+	this.Description = "Интернет-магазин, а также первый проект выполненный по заказу.";
 	this.StackTechnology = ["Bootstrap 5", "HTML5", "CSS3", "SCSS", "JS"];
 	this.RootImagesPath = `${ROOT_IMAGES_PATH}hochustul/`;
 	this.Images = ["test.png", "test.png"];
@@ -123,7 +123,7 @@ function HochuStulModal() {
 
 function FastCodeModal() {
 	this.Title = "FAST[CODE]";
-	this.Description = "Данный проект, он же один из последних, был разработан по прозьбе моего товарища, простой лендинг.";
+	this.Description = "Данный проект, он же один из последних, был разработан по просьбе моего товарища, простой лендинг.";
 	this.StackTechnology = ["Bootstrap 5", "HTML5", "CSS3", "SCSS", "JS", "JQuery"];
 	this.RootImagesPath = `${ROOT_IMAGES_PATH}fastcode/`;
 	this.Images = ["test.png", "test.png", "test.png", "test.png"];
@@ -131,7 +131,7 @@ function FastCodeModal() {
 
 function PortfolioModal() {
 	this.Title = "Портфолио";
-	this.Description = "Ну а это просто мой сай, на котором вы сейчас находитесь :)";
+	this.Description = "Ну а это просто мой сайт, на котором вы сейчас находитесь :)";
 	this.StackTechnology = ["Bootstrap 5", "HTML5", "CSS3", "SCSS", "JS"];
 	this.RootImagesPath = `${ROOT_IMAGES_PATH}portfolio/`;
 	this.Images = ["test.png"];

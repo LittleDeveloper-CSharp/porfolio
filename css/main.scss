@@ -9,49 +9,58 @@ $item-color: #d4000f;
 $main-color: #fff;
 $submain-color: #999;
 
-.modal-content {
-    border: 1px solid $item-color !important;
-    background-color: #000 !important;
-
-    .modal-header,
-    .modal-footer {
-        background-color: $section-backgroud-color;
-    }
-
-    .modal-body {
-        .col-description {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            .description {
-                color: $submain-color;
-            }
-
-            .stack-technology {
-                display: flex;
-                justify-content: flex-start;
-                flex-direction: row;
-                flex-wrap: wrap;
-                align-content: space-around;
-                gap: 5px;
-
-                span {
-                    padding: 2px 10px;
-                    background-color: rgba($submain-color, 0.6);
-                    color: $main-color;
-                    border-radius: 10px;
-                }
-            }
+.modal {
+    @media (min-width: 576px) {
+        .modal-dialog {
+            max-width: 674px;
+            margin: 1.75rem auto;
         }
     }
 
-    .modal-header {
-        border-bottom: 1px solid $item-color;
-    }
+    .modal-content {
+        border: 1px solid $item-color !important;
+        background-color: #000 !important;
 
-    .modal-footer {
-        border-top: 1px solid $item-color !important;
+        .modal-header,
+        .modal-footer {
+            background-color: $section-backgroud-color;
+        }
+
+        .modal-body {
+            .col-description {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .description {
+                    color: $submain-color;
+                }
+
+                .stack-technology {
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-content: space-around;
+                    gap: 5px;
+
+                    span {
+                        padding: 2px 10px;
+                        background-color: rgba($submain-color, 0.6);
+                        color: $main-color;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+
+        .modal-header {
+            border-bottom: 1px solid $item-color;
+        }
+
+        .modal-footer {
+            border-top: 1px solid $item-color !important;
+        }
     }
 }
 
@@ -78,13 +87,14 @@ h5 {
     color: $item-color;
     margin-right: 20px;
     transition: all 0.4s ease;
-    padding-left: 9px;
-    padding-right: 9px;
     vertical-align: top;
     border: 2px solid $main-color;
 
     i {
         font-size: 38px;
+        margin: auto;
+        width: fit-content;
+        display: block;
     }
 
     &:hover {
@@ -338,6 +348,7 @@ section {
             .description-card .media-icon {
                 .bi {
                     font-size: 30px;
+                    margin-top: 2px;
                 }
             }
         }
