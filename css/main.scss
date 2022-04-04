@@ -79,6 +79,19 @@ h5 {
     margin: 0;
 }
 
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: $item-color;
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: $section-backgroud-color;    
+}
+
 %media-icon {
     display: inline-block;
     border-radius: 50%;
